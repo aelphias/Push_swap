@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/18 19:48:42 by aelphias         ###   ########.fr       */
+/*   Created: 2019/09/21 17:23:10 by aelphias          #+#    #+#             */
+/*   Updated: 2019/09/22 23:47:27 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "../libft/includes/libft.h"
-# include "../ft_printf/includes/ft_printf.h"
-#endif
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c < 128)
+		return (1);
+	else
+		return (0);
+}

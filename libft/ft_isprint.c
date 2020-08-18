@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/18 19:48:42 by aelphias         ###   ########.fr       */
+/*   Created: 2019/09/22 17:44:24 by aelphias          #+#    #+#             */
+/*   Updated: 2019/09/22 17:49:26 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "../libft/includes/libft.h"
-# include "../ft_printf/includes/ft_printf.h"
-#endif
+int	ft_isprint(int c)
+{
+	if (c > 31 && c < 127)
+		return (1);
+	else
+		return (0);
+}

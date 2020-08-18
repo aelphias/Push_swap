@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:43:06 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/18 15:30:03 by aelphias         ###   ########.fr       */
+/*   Created: 2019/09/25 18:03:56 by aelphias          #+#    #+#             */
+/*   Updated: 2019/09/25 19:39:27 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (argc < 2)
-		exit(1);
-		/* atoi
-		isdigit
-		gnl 
-		if! int  || > int  || duplicates || instruction doesnt exis twrite(2, "Error\n", 6)
-		;*/
-	while (*argv[1])
+	size_t		i;
+	char		*ptr_dst;
+	const char	*ptr_src;
+
+	ptr_dst = (char *)dst;
+	ptr_src = (const char *)src;
+	i = 0;
+	if (!dst && !src)
+		return (NULL);
+	if (ptr_src > ptr_dst)
 	{
-		ft_printf(" *argv[1]:%c", *argv[1]);
-		argv[1]++;
+		while (i < len)
+		{
+			ptr_dst[i] = ptr_src[i];
+			i++;
+		}
 	}
-	return (0);
+	else
+		while (len--)
+		{
+			ptr_dst[len] = ptr_src[len];
+		}
+	return ((void*)ptr_dst);
 }

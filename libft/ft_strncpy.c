@@ -1,17 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/18 19:48:42 by aelphias         ###   ########.fr       */
+/*   Created: 2019/09/25 21:28:47 by aelphias          #+#    #+#             */
+/*   Updated: 2019/09/25 22:02:20 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "../libft/includes/libft.h"
-# include "../ft_printf/includes/ft_printf.h"
-#endif
+#include "libft.h"
+
+char	*ft_strncpy(char *dst, const char *src, size_t len)
+{
+	size_t i;
+
+	i = 0;
+	while (i < len && src[i])
+	{
+		dst[i] = ((char *)src)[i];
+		i++;
+	}
+	i--;
+	while (++i < len)
+		dst[i] = '\0';
+	return (dst);
+}

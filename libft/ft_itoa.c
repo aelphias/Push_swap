@@ -1,30 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:43:06 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/18 15:30:03 by aelphias         ###   ########.fr       */
+/*   Created: 2019/09/29 17:26:31 by aelphias          #+#    #+#             */
+/*   Updated: 2019/10/21 16:12:05 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+static	int	num_size(int nb)
 {
-	if (argc < 2)
-		exit(1);
-		/* atoi
-		isdigit
-		gnl 
-		if! int  || > int  || duplicates || instruction doesnt exis twrite(2, "Error\n", 6)
-		;*/
-	while (*argv[1])
+	int	sz;
+
+	sz = 1;
+	while (nb /= 10)
+		++sz;
+	return (sz);
+}
+
+char		*ft_itoa(int n)
+{
+	char				*s;
+	int					sz;
+	unsigned	int		buf;
+
+	sz = num_size(n);
+	buf = n;
+	if (n < 0)
 	{
-		ft_printf(" *argv[1]:%c", *argv[1]);
-		argv[1]++;
+		buf = -n;
+		sz++;
 	}
-	return (0);
+	if (!(s = ft_strnew(sz)))
+		return (NULL);
+	s[--sz] = buf % 10 + '0';
+	while (buf /= 10)
+		s[--sz] = buf % 10 + '0';
+	if (n < 0)
+		*(s + 0) = '-';
+	return (s);
 }

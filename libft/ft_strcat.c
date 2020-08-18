@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/18 19:48:42 by aelphias         ###   ########.fr       */
+/*   Created: 2019/09/25 22:03:37 by aelphias          #+#    #+#             */
+/*   Updated: 2019/09/25 22:48:19 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "../libft/includes/libft.h"
-# include "../ft_printf/includes/ft_printf.h"
-#endif
+#include "libft.h"
+
+char	*ft_strcat(char *s1, const char *s2)
+{
+	ft_strcpy(s1 + ft_strlen(s1), s2);
+	return (s1);
+}

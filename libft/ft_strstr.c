@@ -1,17 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/18 19:48:42 by aelphias         ###   ########.fr       */
+/*   Created: 2019/09/26 16:37:10 by aelphias          #+#    #+#             */
+/*   Updated: 2019/09/28 15:28:22 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-# include "../libft/includes/libft.h"
-# include "../ft_printf/includes/ft_printf.h"
-#endif
+#include "libft.h"
+
+char	*ft_strstr(const char *haystack, const char *needle)
+{
+	int		size_m;
+	int		i;
+	int		size_b;
+
+	i = 0;
+	if (needle[0] == '\0')
+		return ((char *)haystack);
+	size_m = ft_strlen(needle);
+	size_b = ft_strlen(haystack);
+	while (ft_strncmp(&haystack[i], needle, size_m) && (i <= (size_b - size_m)))
+		i++;
+	if ((i <= (size_b - size_m)))
+		return ((char *)&haystack[i]);
+	return (NULL);
+}
