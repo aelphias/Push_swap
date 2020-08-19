@@ -15,18 +15,18 @@ FT_PRINTF = ./ft_printf/
 .PHONY: clean fclean all re
 all: $(NAME1)
 $(NAME1): $(OBJ_DIR) $(OBJS) $(LIBFT) $(FT_PRINTF)
-	gcc -o $(NAME1) $(FLAGS) $(INCL) -L$(FT_PRINTF) -lftprintf -I./libft/includes/ -L$(LIBFT) -lft $(OBJS)
+	@gcc -o $(NAME1) $(FLAGS) $(INCL) -L$(FT_PRINTF) -lftprintf -I./libft/includes/ -L$(LIBFT) -lft $(OBJS)
 $(OBJ_DIR):
-	mkdir $(OBJ_DIR)
+	@mkdir $(OBJ_DIR)
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INC_C)
-	gcc $(FLAGS) -c $< -o $@
+	@gcc $(FLAGS) -c $< -o $@
 FORCE:		;
 
 $(LIBFT):		FORCE
-				make -C $(LIBFT)
+				@make -C $(LIBFT)
 
 $(FT_PRINTF):		FORCE
-				make -C $(FT_PRINTF)
+				@make -C $(FT_PRINTF)
 norm:
 	norminette includes/*.h src/*.c
 clean:

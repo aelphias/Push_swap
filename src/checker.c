@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:43:06 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/18 21:27:42 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/20 00:24:09 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,20 @@ int	main(int argc, char **argv)
 		gnl
 		if! int  || > int  || duplicates || instruction doesnt exis twrite(2, "Error\n", 6)
 		;*/
-	while (*argv[1])
+	while (argc > i)
 	{
-		ft_printf(" *argv[1]:%c", *argv[1]);
-		argv[1]++;
+		str = ft_strsplit(argv[i], ' ');
+		i++;
 	}
-	ft_printf("\n");
-	str = ft_strsplit(argv[1], ' ');
-	ft_printf("%s\n", str[0]);
-		
-		
-	ft_printf("hey\n");
+	
+	while (*str != '\0' )
+	{
+		ft_printf("%s\n", *str);
+		str++;	
+	}
+	
+	ft_printf("\n I'm working, sunny!\n");
+	
 /* 	count = ft_atoi()
  */
 
