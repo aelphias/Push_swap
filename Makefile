@@ -5,11 +5,11 @@ SRC_DIR = ./src/
 OBJ_DIR = ./obj/
 SRC_INC_DIR = ./includes
 INC_C = ./includes/push_swap.h
-SRC_FILES =  *.c
+SRC_FILES = checker.c parse.c
 SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.c=.o))
 INCL = -I$(SRC_INC_DIR)
-FLAGS = -Werror -Wextra -Wall -g $(INCL)
+FLAGS =  -Wextra -Wall -g $(INCL) # add -Wall
 LIBFT = ./libft/
 FT_PRINTF = ./ft_printf/
 .PHONY: clean fclean all re
@@ -21,10 +21,8 @@ $(OBJ_DIR):
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c $(INC_C)
 	@gcc $(FLAGS) -c $< -o $@
 FORCE:		;
-
 $(LIBFT):		FORCE
 				@make -C $(LIBFT)
-
 $(FT_PRINTF):		FORCE
 				@make -C $(FT_PRINTF)
 norm:
