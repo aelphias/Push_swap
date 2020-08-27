@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:43:06 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/27 20:03:18 by aelphias         ###   ########.fr       */
+/*   Created: 2020/08/27 19:45:57 by aelphias          #+#    #+#             */
+/*   Updated: 2020/08/27 19:50:00 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	execute(t_push_swap *data)
 {
-	t_push_swap data;
-	
-	if (ac < 3 || ft_strlen(av[1]) == 0)
-		exit(0);
-	ft_bzero(&data, sizeof(t_push_swap));
-	read_args(&data, ac, av);
-	return (0);
+	int i;
+
+	i = 0;
+	while (data->saved_line[i] != '\0')
+	{
+		if (!ft_strcmp(data->saved_line, "sa"))
+		{
+			sa(data);
+			i = i + 2;
+		}
+		else
+			i++;
+	}
 }

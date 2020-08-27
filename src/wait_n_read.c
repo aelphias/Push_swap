@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   wait_n_read.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:43:06 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/27 20:03:18 by aelphias         ###   ########.fr       */
+/*   Created: 2020/08/27 18:43:42 by aelphias          #+#    #+#             */
+/*   Updated: 2020/08/27 19:45:30 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	read_commands(t_push_swap *data)
 {
-	t_push_swap data;
+	while (get_next_line(0, &data->line))
+		ft_strcat(data->saved_line, data->line);
+	/* DEbug */
 	
-	if (ac < 3 || ft_strlen(av[1]) == 0)
-		exit(0);
-	ft_bzero(&data, sizeof(t_push_swap));
-	read_args(&data, ac, av);
-	return (0);
+	
+	
+	//ft_printf("saved_line:%s\n", data->saved_line);
+	free(data->line);
 }

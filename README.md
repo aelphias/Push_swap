@@ -11,8 +11,5 @@ rr	rotates both A and B up by one
 rra	rotates stack A down by one
 rrb	rotates stack B down by one
 rrr	rotates both A and B down by one
-
-
-
 #checker
 read

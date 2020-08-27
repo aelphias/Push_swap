@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/25 08:16:18 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/27 15:58:43 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/27 20:03:06 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	check_duplicates(t_push_swap *data)
 	while (i < data->size_a)
 	{
 		k = 0;
-		while (k < data->size_a)
+		while (i != k && k < data->size_a)
 		{
 			if (data->a[i] == data->a[k])
 				exit(write(2, "Error\n", 6));
@@ -31,6 +31,24 @@ void	check_duplicates(t_push_swap *data)
 		i++;
 	}
 	
+}
+
+void	fill_in_stack_a(t_push_swap *data, int ac, char **av)
+{
+	int i;
+	int size;
+	
+	i = 1;
+	size = 0;
+	while (i < ac)
+	{	
+		data->a[size] = ft_atoi(av[i]);
+		i++;
+		size++;
+	}
+	/* if (size == 1)
+		exit(0); */
+	data->size_a = size;
 }
 
 void	check_int_overflow(char *str)
@@ -65,8 +83,6 @@ void	check_input(int ac, char **av)
 	while (i < ac)
 	{	
 		check_int_overflow(av[i]);
-		if (!ft_atoi(av[i]))
-			exit(write(2, "Error_max\n", 6));
 		flag = 0;
 		if ((ft_strlen(av[i])) == 1)
 			flag = 1;
@@ -86,22 +102,27 @@ void	check_input(int ac, char **av)
 void	read_args(t_push_swap *data, int ac, char **av)
 {
 	int i;
-	int size;
-	
-	i = 1;
-	size = 0;
+
+	i = 0;
 	check_input(ac, av);
-	/*DELETE*/
-	ft_printf("DEBUG - args:");
-	while (i < ac)
-	{	
-		data->a[size] = ft_atoi(av[i]);
-		ft_printf("%d ", data->a[size]);
-		i++;
-		size++;
-	}
-	data->size_a = size;
+	fill_in_stack_a(data, ac, av);
 	check_duplicates(data);
-	/*DELETE*/
-	ft_printf("\n"); 
+	// debug
+	/* ft_printf("stack a:  ");
+	while (i < data->size_a)
+	{
+		ft_printf("%d ", data->a[i]);
+		i++;
+	}*/
+	read_commands(data);
+	execute(data);
+	i = 0;
+	ft_printf("\nstack a:  ");
+
+	while (i < data->size_a)
+	{
+		ft_printf("%d ", data->a[i]);
+		i++;
+	}
+	
 }
