@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 19:45:57 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/27 19:50:00 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/28 22:05:33 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,13 @@ void	execute(t_push_swap *data)
 			sa(data);
 			i = i + 2;
 		}
-		else
+		if (!ft_strcmp(data->saved_line, "pa"))
+		{
+			ft_printf("{inside execute() }\n");
+			
+			pa(data);
+			i = i + 2;
+		}
 			i++;
 	}
 }

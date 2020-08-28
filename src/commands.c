@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 17:24:10 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/27 20:01:38 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/28 22:08:44 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,24 @@ void	ss(t_push_swap *data)
 {
 	sa(data);
 	sb(data);
+}
+
+void	pa(t_push_swap *data)
+{
+	if (data->size_b)
+	{
+		int	i;
+			ft_printf("{ 1 }\n");
+		
+		i = data->size_a;
+		i++;
+		while (i > 0)
+		{
+			data->a[i] = data->a[i - 1];
+			i--;
+		}
+		data->a[0] = data->b[0];
+		//i = 0;
+		
+	}
 }

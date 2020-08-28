@@ -1,5 +1,3 @@
-# Push_swap
-instructions	Description
 sa	swap first two elements of stack A
 sb	swap first two elements of stack B
 ss	sa and sb at the same time
@@ -11,5 +9,5 @@ rr	rotates both A and B up by one
 rra	rotates stack A down by one
 rrb	rotates stack B down by one
 rrr	rotates both A and B down by one
-#checker
-read
+# Push_swap
+instructions	Description

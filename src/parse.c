@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/25 08:16:18 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/27 20:03:06 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/28 22:10:58 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,13 +107,7 @@ void	read_args(t_push_swap *data, int ac, char **av)
 	check_input(ac, av);
 	fill_in_stack_a(data, ac, av);
 	check_duplicates(data);
-	// debug
-	/* ft_printf("stack a:  ");
-	while (i < data->size_a)
-	{
-		ft_printf("%d ", data->a[i]);
-		i++;
-	}*/
+	print_stack_a(data); /*DELETE*/
 	read_commands(data);
 	execute(data);
 	i = 0;

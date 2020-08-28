@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/27 19:50:10 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/28 22:13:45 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,13 @@ void	check_int_overflow(char *str);
 void	check_input(int ac, char **av);
 void	read_commands(t_push_swap *data);
 void	execute(t_push_swap *data);
+void	print_stack_a(t_push_swap *data);
 /*commands:*/
 void	sa(t_push_swap *data);
 void	sb(t_push_swap *data);
+void	ss(t_push_swap *data);
+void	pa(t_push_swap *data);
+
 
 
 #endif
