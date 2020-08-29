@@ -6,17 +6,17 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 18:43:42 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/28 21:41:15 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/29 21:56:15 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	read_commands(t_push_swap *data)
+void	read_commands(t_push_swap *stack)
 {
-	while (get_next_line(0, &data->line))
-		ft_strcat(data->saved_line, data->line);
+	while (get_next_line(0, &stack->line))
+		ft_strcat(stack->saved_line, stack->line);
 	/* DEbug */
-	//ft_printf("saved_line:%s\n", data->saved_line);
-	free(data->line);
+	//ft_printf("saved_line:%s\n", stack->saved_line);
+	free(stack->line);
 }

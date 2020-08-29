@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/28 22:13:45 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/29 22:31:06 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,19 +26,27 @@ typedef struct s_push_swap
 	char saved_line[50000];
 }	t_push_swap;
 
-void	read_args(t_push_swap *data, int ac, char **av);
-void	check_duplicates(t_push_swap *data);
+void	read_args(t_push_swap *stack, int ac, char **av);
+void	check_duplicates(t_push_swap *stack);
 void	check_int_overflow(char *str);
 void	check_input(int ac, char **av);
-void	read_commands(t_push_swap *data);
-void	execute(t_push_swap *data);
-void	print_stack_a(t_push_swap *data);
-/*commands:*/
-void	sa(t_push_swap *data);
-void	sb(t_push_swap *data);
-void	ss(t_push_swap *data);
-void	pa(t_push_swap *data);
+void	read_commands(t_push_swap *stack);
+void	execute0(t_push_swap *stack);
+void	execute1(t_push_swap *stack, int i);
+void	print_stack_a(t_push_swap *stack);
+void	print_stack_b(t_push_swap *stack);
 
+/*commands:*/
+void	sa(t_push_swap *stack);
+void	sb(t_push_swap *stack);
+void	ss(t_push_swap *stack);
+void	pa(t_push_swap *stack);
+void	pb(t_push_swap *stack);
+void	ra(t_push_swap *stack);
+
+
+/*DEBUG*/
+void	debug(t_push_swap *stack);
 
 
 #endif

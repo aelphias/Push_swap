@@ -6,25 +6,25 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/25 08:16:18 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/28 22:10:58 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/08/29 22:28:42 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	check_duplicates(t_push_swap *data)
+void	check_duplicates(t_push_swap *stack)
 {
 	int i;
 	int k;
 
 	i = 0;
 	k = 0;
-	while (i < data->size_a)
+	while (i < stack->size_a)
 	{
 		k = 0;
-		while (i != k && k < data->size_a)
+		while (i != k && k < stack->size_a)
 		{
-			if (data->a[i] == data->a[k])
+			if (stack->a[i] == stack->a[k])
 				exit(write(2, "Error\n", 6));
 			k++;
 		}
@@ -33,7 +33,7 @@ void	check_duplicates(t_push_swap *data)
 	
 }
 
-void	fill_in_stack_a(t_push_swap *data, int ac, char **av)
+void	fill_in_stack_a(t_push_swap *stack, int ac, char **av)
 {
 	int i;
 	int size;
@@ -42,13 +42,13 @@ void	fill_in_stack_a(t_push_swap *data, int ac, char **av)
 	size = 0;
 	while (i < ac)
 	{	
-		data->a[size] = ft_atoi(av[i]);
+		stack->a[size] = ft_atoi(av[i]);
 		i++;
 		size++;
 	}
 	/* if (size == 1)
 		exit(0); */
-	data->size_a = size;
+	stack->size_a = size;
 }
 
 void	check_int_overflow(char *str)
@@ -99,24 +99,14 @@ void	check_input(int ac, char **av)
 	}
 }
 
-void	read_args(t_push_swap *data, int ac, char **av)
+void	read_args(t_push_swap *stack, int ac, char **av)
 {
-	int i;
-
-	i = 0;
 	check_input(ac, av);
-	fill_in_stack_a(data, ac, av);
-	check_duplicates(data);
-	print_stack_a(data); /*DELETE*/
-	read_commands(data);
-	execute(data);
-	i = 0;
-	ft_printf("\nstack a:  ");
-
-	while (i < data->size_a)
-	{
-		ft_printf("%d ", data->a[i]);
-		i++;
-	}
-	
+	fill_in_stack_a(stack, ac, av);
+	check_duplicates(stack);
+	read_commands(stack);
+	debug(stack);		/*DELETE*/
+	execute0(stack);
+	print_stack_a(stack); /*DELETE*/
+	print_stack_b(stack); /*DELETE*/
 }

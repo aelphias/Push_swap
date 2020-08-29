@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   commands1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/16 15:43:06 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/29 21:56:15 by aelphias         ###   ########.fr       */
+/*   Created: 2020/08/29 22:17:10 by aelphias          #+#    #+#             */
+/*   Updated: 2020/08/29 22:31:13 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	ra(t_push_swap *stack)
 {
-	t_push_swap stack;
+	int tmp;
+	int i;
+
+	if (stack->size_a)
+	{
+		i = stack->size_a;
+		tmp = stack->a[0];
+		while (i < stack->size_a - 1)
+		{
+			stack->a[i] = stack->a[i + 1];
+			i++;
+		}
+		stack->a[i] = tmp;
+		
+	}
 	
-	if (ac < 3 || ft_strlen(av[1]) == 0)
-		exit(0);
-	ft_bzero(&stack, sizeof(t_push_swap));
-	read_args(&stack, ac, av);
-	return (0);
 }
-	
