@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/27 19:45:57 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/29 22:32:21 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/01 13:39:14 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,17 @@ void	execute0(t_push_swap *stack)
 			sa(stack);
 			i = i + 2;
 		}
-		if (!ft_strcmp(stack->saved_line, "pa"))
+		if (!ft_strcmp(stack->saved_line, "sb"))
 		{
-			pa(stack);
+			sb(stack);
 			i = i + 2;
 		}
-		if (!ft_strcmp(stack->saved_line, "pb"))
+		if (!ft_strcmp(stack->saved_line, "ss"))
 		{
-			pb(stack);
+			ss(stack);
 			i = i + 2;
 		}
+	
 		execute1(stack, i);
 		i++;
 	}
@@ -42,9 +43,21 @@ void	execute0(t_push_swap *stack)
 
 void	execute1(t_push_swap *stack, int i)
 {
-	if (!ft_strcmp(stack->saved_line, "pb"))
+	ft_printf("entered execute1\n");
+
+	if (!ft_strcmp(stack->saved_line, "pa"))
 		{
-			ra(stack);
+			pa(stack);
 			i = i + 2;
 		}
+	if (!ft_strcmp(stack->saved_line, "pb"))
+	{
+		pb(stack);
+		i = i + 2;
+	}
+	if (!ft_strcmp(stack->saved_line, "ra"))
+	{
+		ra(stack);
+		i = i + 2;
+	}
 }

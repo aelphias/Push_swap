@@ -6,7 +6,7 @@ OBJ_DIR = ./obj/
 SRC_INC_DIR = ./includes
 INC_C = ./includes/push_swap.h
 SRC_FILES = checker.c parse.c commands0.c wait_n_read.c execute.c print_stack.c\
-			debug.c
+			debug.c commands1.c
 SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.c=.o))
 INCL = -I$(SRC_INC_DIR)
