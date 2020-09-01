@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/30 09:48:02 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/01 19:08:38 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ typedef struct s_push_swap
 	int size_a;
 	int size_b;
 	char *line;
-	char saved_line[50000];
 }	t_push_swap;
 
 void	read_args(t_push_swap *stack, int ac, char **av);
@@ -31,18 +30,25 @@ void	check_duplicates(t_push_swap *stack);
 void	check_int_overflow(char *str);
 void	check_input(int ac, char **av);
 void	read_commands(t_push_swap *stack);
-void	execute0(t_push_swap *stack);
-void	execute1(t_push_swap *stack, int i);
+void	choose_f(t_push_swap *stack);
 void	print_stack_a(t_push_swap *stack);
 void	print_stack_b(t_push_swap *stack);
 
 /*commands:*/
+
 void	sa(t_push_swap *stack);
 void	sb(t_push_swap *stack);
 void	ss(t_push_swap *stack);
 void	pa(t_push_swap *stack);
 void	pb(t_push_swap *stack);
 void	ra(t_push_swap *stack);
+void	rb(t_push_swap *stack);
+void	rr(t_push_swap *stack);
+void	rra(t_push_swap *stack);/*
+void	rrb(t_push_swap *stack);
+void	rrr(t_push_swap *stack); */
+
+
 
 
 /*DEBUG*/

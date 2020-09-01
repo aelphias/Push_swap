@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/25 08:16:18 by aelphias          #+#    #+#             */
-/*   Updated: 2020/08/29 22:28:42 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/01 18:02:31 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ void	fill_in_stack_a(t_push_swap *stack, int ac, char **av)
 		i++;
 		size++;
 	}
-	/* if (size == 1)
-		exit(0); */
+	if (size == 1)
+		exit(0);
 	stack->size_a = size;
 }
 
@@ -103,10 +103,9 @@ void	read_args(t_push_swap *stack, int ac, char **av)
 {
 	check_input(ac, av);
 	fill_in_stack_a(stack, ac, av);
+	debug(stack);		/*DELETE*/
 	check_duplicates(stack);
 	read_commands(stack);
-	debug(stack);		/*DELETE*/
-	execute0(stack);
 	print_stack_a(stack); /*DELETE*/
 	print_stack_b(stack); /*DELETE*/
 }
