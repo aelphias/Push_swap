@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/01 19:08:38 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/02 11:02:16 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ void	pb(t_push_swap *stack);
 void	ra(t_push_swap *stack);
 void	rb(t_push_swap *stack);
 void	rr(t_push_swap *stack);
-void	rra(t_push_swap *stack);/*
+void	rra(t_push_swap *stack);
 void	rrb(t_push_swap *stack);
-void	rrr(t_push_swap *stack); */
+void	rrr(t_push_swap *stack);
 
 
 

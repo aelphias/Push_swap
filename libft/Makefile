@@ -6,7 +6,7 @@
 #    By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/19 15:28:53 by aelphias          #+#    #+#              #
-#    Updated: 2020/08/19 19:52:14 by aelphias         ###   ########.fr        #
+#    Updated: 2020/09/02 11:06:32 by aelphias         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,11 +43,11 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 %.o : %.c $(HEAD)
-	@$(CC) -c $< -o $@ -I$(SRC_INC_DIR)
+	$(CC) -c $< -o $@ -I$(SRC_INC_DIR)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
+	ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
 
 clean:
 	/bin/rm -f $(OBJ)

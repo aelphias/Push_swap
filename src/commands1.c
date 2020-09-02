@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 22:17:10 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/01 19:29:50 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/02 11:09:05 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,26 @@ void	rra(t_push_swap *stack)
 		
 	}
 	
+}
+
+void	rrb(t_push_swap *stack)
+{
+	ft_printf("entered rrb\n"); /*DEBUG*/
+	int i;
+	int tmp;
+	
+	i = stack->size_b;
+	if (stack->size_b)
+	{
+		//stack->b[0] = stack->a[stack->size_b];
+		tmp = stack->b[stack->size_b -1 ];
+		ft_printf("tmp=%d\n", tmp);
+		while (i > 0)
+		{
+			stack->b[i] = stack->b[i - 1];
+			i--;
+		}
+		stack->b[0] = tmp;
+		
+	}
 }

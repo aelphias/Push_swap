@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.c                                            :+:      :+:    :+:   */
+/*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/29 20:38:47 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/02 11:09:50 by aelphias         ###   ########.fr       */
+/*   Created: 2020/09/02 11:15:59 by aelphias          #+#    #+#             */
+/*   Updated: 2020/09/02 11:17:18 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	debug(t_push_swap *stack)
+int	is_sorted(t_push_swap *stack)
 {
-	stack->b[0] = 4; /*DELETE*/
-	stack->b[1] = 5;
-	stack->b[2] = 6;
-	stack->size_b = 3;
+	
+	return (0);
 }

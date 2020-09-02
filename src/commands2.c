@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.c                                            :+:      :+:    :+:   */
+/*   commands2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/29 20:38:47 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/02 11:09:50 by aelphias         ###   ########.fr       */
+/*   Created: 2020/09/02 10:56:41 by aelphias          #+#    #+#             */
+/*   Updated: 2020/09/02 11:09:09 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	debug(t_push_swap *stack)
+void	rrr(t_push_swap *stack)
 {
-	stack->b[0] = 4; /*DELETE*/
-	stack->b[1] = 5;
-	stack->b[2] = 6;
-	stack->size_b = 3;
+	ft_printf("entered rrr\n"); /*DEBUG*/
+	if (stack->size_b && stack->size_b)
+	{
+		rra(stack);
+		rrb(stack);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/01 14:21:54 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/01 19:08:53 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/02 11:01:22 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	choose_f(t_push_swap *stack)
 		rr(stack);
 	if (ft_strequ(stack->line, "rra"))
 		rra(stack);
-	/*if (ft_strequ(stack->line, "rrb"))
+	if (ft_strequ(stack->line, "rrb"))
 		rrb(stack);
 	if (ft_strequ(stack->line, "rrr"))
-		rrr(stack); */
+		rrr(stack);
 }
