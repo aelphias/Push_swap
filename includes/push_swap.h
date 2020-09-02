@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/02 11:02:16 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/02 12:54:44 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	read_commands(t_push_swap *stack);
 void	choose_f(t_push_swap *stack);
 void	print_stack_a(t_push_swap *stack);
 void	print_stack_b(t_push_swap *stack);
+int	is_sorted(t_push_swap *stack);
 
 /*commands:*/
 

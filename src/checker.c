@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:43:06 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/01 18:17:18 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/02 12:54:21 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@ int	main(int ac, char **av)
 		exit(1);
 	ft_bzero(&stack, sizeof(t_push_swap));
 	read_args(&stack, ac, av);
+	if (is_sorted(&stack))
+		write(1,"OK\n", 3);
+	else
+		write(1,"KO\n", 3);	
 	return (0);
 }
 	
