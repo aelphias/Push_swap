@@ -49,8 +49,8 @@ void	pa(t_push_swap *stack)
 	if (stack->size_b)
 	{
 		int	i;
-		ft_printf("entered pa\n");
-	ft_printf("size_a = %d\n--------\n", stack->size_a);
+	/* 	ft_printf("entered pa\n");
+	ft_printf("size_a = %d\n--------\n", stack->size_a); */
 		
 		stack->size_a++;
 		i =	stack->size_a;
@@ -76,8 +76,8 @@ void	pb(t_push_swap *stack)
 	if (stack->size_a)
 	{
 		int	i;
-		ft_printf("entered pb\n");
-	ft_printf("size_b = %d\n--------\n", stack->size_b);
+		/* ft_printf("entered pb\n");
+	ft_printf("size_b = %d\n--------\n", stack->size_b); */
 		
 		stack->size_b++;
 		i =	stack->size_b;

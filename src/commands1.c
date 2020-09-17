@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 22:17:10 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/02 11:09:05 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/09/17 18:31:41 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ra(t_push_swap *stack)
 {
-	ft_printf("entered ra\n"); /*DEBUG*/
+	/* ft_printf("entered ra\n"); DEBUG
+	*/
 	int tmp;
 	int i;
 
@@ -33,7 +34,7 @@ void	ra(t_push_swap *stack)
 
 void	rb(t_push_swap *stack)
 {
-	ft_printf("entered rb\n"); /*DEBUG*/
+	//ft_printf("entered rb\n"); /*DEBUG*/
 	int tmp;
 	int i;
 
@@ -58,8 +59,7 @@ void	rr(t_push_swap *stack)
 
 void	rra(t_push_swap *stack)
 {
-	ft_printf("entered rra\n"); /*DEBUG*/
-
+	//ft_printf("entered rra\n"); /*DEBUG*/
 	int i;
 	int tmp;
 	
@@ -68,7 +68,7 @@ void	rra(t_push_swap *stack)
 	{
 		//stack->a[0] = stack->a[stack->size_a];
 		tmp = stack->a[stack->size_a -1 ];
-		ft_printf("tmp=%d\n", tmp);
+	//	ft_printf("tmp=%d\n", tmp);
 		while (i > 0)
 		{
 			stack->a[i] = stack->a[i - 1];
@@ -82,7 +82,7 @@ void	rra(t_push_swap *stack)
 
 void	rrb(t_push_swap *stack)
 {
-	ft_printf("entered rrb\n"); /*DEBUG*/
+//	ft_printf("entered rrb\n"); /*DEBUG*/
 	int i;
 	int tmp;
 	
@@ -91,7 +91,7 @@ void	rrb(t_push_swap *stack)
 	{
 		//stack->b[0] = stack->a[stack->size_b];
 		tmp = stack->b[stack->size_b -1 ];
-		ft_printf("tmp=%d\n", tmp);
+	//	ft_printf("tmp=%d\n", tmp);
 		while (i > 0)
 		{
 			stack->b[i] = stack->b[i - 1];
