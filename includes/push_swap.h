@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/12 21:21:19 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/10/04 19:11:55 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ int		is_sorted(t_push_swap *stack);
 void	read_commands(t_push_swap *stack);
 void	read_args(t_push_swap *stack, int ac, char **av);
 
-
 /*commands:*/
 
 void	sa(t_push_swap *stack);
@@ -52,12 +51,15 @@ void	rra(t_push_swap *stack);
 void	rrb(t_push_swap *stack);
 void	rrr(t_push_swap *stack);
 
-
 /*algos*/
 void	sort_3(t_push_swap *stack);
+void	s3rasa(t_push_swap *stack);
+void	s3ra(t_push_swap *stack);
+void	s3sa(t_push_swap *stack);
+void	s3sara(t_push_swap *stack);
+//void	sort_5(t_push_swap *stack);
 
 /*DEBUG*/
 void	debug(t_push_swap *stack);
-
 
 #endif

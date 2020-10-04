@@ -9,7 +9,8 @@ SRC_FILES_CHECKER = checker.c parse.c wait_n_read.c print_stack.c\
 			debug.c choose_f.c commands0.c commands1.c\
 			commands2.c is_sorted.c 
 SRC_FILES_PUSH_SWAP = push_swap.c is_sorted.c parse.c\
-						debug.c sort_3.c
+						commands0.c commands1.c commands2.c\
+						debug.c sort_3.c #sort_5.c
 SRCS_CHECKER = $(addprefix $(SRC_DIR), $(SRC_FILES_CHECKER))
 SRCS_PUSH_SWAP = $(addprefix $(SRC_DIR), $(SRC_FILES_PUSH_SWAP))
 OBJS_CH = $(addprefix $(OBJ_DIR), $(SRC_FILES_CHECKER:.c=.o))

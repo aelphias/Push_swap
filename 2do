@@ -1,4 +1,2 @@
-take arg
-count arg
-malloc space for 
-atoi 
+if (a.n >= a.n+1)
+	swap a & a.n+1
