@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 13:21:40 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/04 19:12:51 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/10/13 22:15:39 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ int	main(int ac, char **av)
 		write(1, "sa\n", 3);
 	if (stack.size_a == 3)
 		sort_3(&stack);
-	/* if (stack.size_a == 5)
-		sort_5(&stack); */
+	
+	print_stack_a;
+	print_stack_b;
 	return (0);
 }

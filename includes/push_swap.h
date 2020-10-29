@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/04 19:11:55 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/10/13 18:28:40 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	s3rasa(t_push_swap *stack);
 void	s3ra(t_push_swap *stack);
 void	s3sa(t_push_swap *stack);
 void	s3sara(t_push_swap *stack);
-//void	sort_5(t_push_swap *stack);
+void	sort_5(t_push_swap *stack);
 
 /*DEBUG*/
 void	debug(t_push_swap *stack);
