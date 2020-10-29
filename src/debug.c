@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 20:38:47 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/04 16:33:50 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/10/29 23:11:25 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	debug(t_push_swap *stack)
 {
-	stack->b[0] = 4; /*DELETE*/
-	stack->b[1] = 5;
-	stack->b[2] = 6;
-	stack->size_b = 3;
+	find_min_max(stack);
 }

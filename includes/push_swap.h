@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/13 18:28:40 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/10/29 23:06:36 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,14 @@ typedef struct s_push_swap
 {
 	int a[400000];
 	int b[400000];
+	/* int q_op keeps quantity of operations needed to put element of stack B in proper place 
+	in stack A index number of an element in this array corresponds to index number of element of stack B*/
+	int q_op[400000];
 	int size_a;
 	int size_b;
 	char *line;
+	int min;
+	int max;
 }	t_push_swap;
 
 void	read_args(t_push_swap *stack, int ac, char **av);
@@ -57,7 +62,10 @@ void	s3rasa(t_push_swap *stack);
 void	s3ra(t_push_swap *stack);
 void	s3sa(t_push_swap *stack);
 void	s3sara(t_push_swap *stack);
-void	sort_5(t_push_swap *stack);
+
+/* tools 4 sort */
+void	find_min_max(t_push_swap *stack);
+
 
 /*DEBUG*/
 void	debug(t_push_swap *stack);

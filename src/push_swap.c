@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/04 13:21:40 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/13 22:15:39 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/10/29 23:20:11 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,14 @@ int	main(int ac, char **av)
 	read_args(&stack, ac, av);
 	if (is_sorted(&stack))
 	{
-		ft_printf("sorted\n!");
-		write(2, "\n", 1);
+		ft_printf("sorted\n");
 		return (0);
 	}
 	if (stack.size_a == 2)
 		write(1, "sa\n", 3);
 	if (stack.size_a == 3)
 		sort_3(&stack);
-	
+	debug(&stack);
 	print_stack_a;
 	print_stack_b;
 	return (0);

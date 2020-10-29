@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/25 08:16:18 by aelphias          #+#    #+#             */
-/*   Updated: 2020/09/17 18:27:26 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/10/29 20:15:24 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,5 @@ void	read_args(t_push_swap *stack, int ac, char **av)
 {
 	check_input(ac, av);
 	fill_in_stack_a(stack, ac, av);
-	//debug(stack);		/*DELETE*/
 	check_duplicates(stack);
 }

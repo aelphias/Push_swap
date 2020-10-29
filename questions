@@ -1,1 +1,1 @@
-How get to know how many strs strsplit reterned? -- If str[i] == \0 --> the end
+How find out how many strs strsplit returned? -- If str[i] == \0 --> the end

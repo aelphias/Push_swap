@@ -1,46 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5.c                                           :+:      :+:    :+:   */
+/*   tools_2_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/25 21:11:44 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/13 22:07:40 by aelphias         ###   ########.fr       */
+/*   Created: 2020/10/29 22:50:22 by aelphias          #+#    #+#             */
+/*   Updated: 2020/10/29 23:25:11 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-/* smallest() returns order number of smallest element
-*/
-int	smallest(t_push_swap *stack)
+void	find_min_max(t_push_swap *stack)
 {
 	int i;
-	int sl;
-	
-	sl = 0;
+
 	i = 0;
+	stack->min = stack->a[0];
+	stack->max = stack->a[0];
 	while (i < stack->size_a)
 	{
-		if (stack->a[i] < stack->a[sl])
-			sl = i;
+		if (stack->a[i] < stack->min)
+		stack->min = stack->a[i];
+		if (stack->a[i] > stack->max)
+		stack->max = stack->a[i];
 		i++;
 	}
-	return (sl);
-}
-
-void	sort_5(t_push_swap *stack)
-{
-	/* pb(stack);
-	pb(stack); */
-	if (stack->size_a)
-	{
-		/* code */
-	} 
-	ft_printf("sl= %d\n", stack->a[smallest(stack)]);
-	ft_printf("pos_sl= %d\n", smallest(stack));
-	//sort_3(stack);
-	
-	
+	ft_printf("min=%d\n", stack->min);
+	ft_printf("max=%d\n", stack->max);
 }
