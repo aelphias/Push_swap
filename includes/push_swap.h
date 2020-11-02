@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/29 23:06:36 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/11/02 20:47:55 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,22 @@
 # include "../libft/includes/libft.h"
 # include "../ft_printf/includes/ft_printf.h"
 
+# define ARRAY_SIZE 500000 
+
 typedef struct s_push_swap
 {
-	int a[400000];
-	int b[400000];
+	int a[ARRAY_SIZE];
+	int b[ARRAY_SIZE];
 	/* int q_op keeps quantity of operations needed to put element of stack B in proper place 
 	in stack A index number of an element in this array corresponds to index number of element of stack B*/
-	int q_op[400000];
+	int q_op[ARRAY_SIZE];
 	int size_a;
 	int size_b;
 	char *line;
 	int min;
 	int max;
+	int index_min;
+	int index_max;
 }	t_push_swap;
 
 void	read_args(t_push_swap *stack, int ac, char **av);
@@ -58,13 +62,16 @@ void	rrr(t_push_swap *stack);
 
 /*algos*/
 void	sort_3(t_push_swap *stack);
+void	sort(t_push_swap *stack);
 void	s3rasa(t_push_swap *stack);
 void	s3ra(t_push_swap *stack);
 void	s3sa(t_push_swap *stack);
 void	s3sara(t_push_swap *stack);
 
-/* tools 4 sort */
+/* tools to sort */
 void	find_min_max(t_push_swap *stack);
+//void	find_lis(t_push_swap *stack);
+
 
 
 /*DEBUG*/

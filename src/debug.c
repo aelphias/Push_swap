@@ -6,13 +6,13 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/29 20:38:47 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/29 23:11:25 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/11/02 18:29:05 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	debug(t_push_swap *stack)
+/* void	debug(t_push_swap *stack)
 {
-	find_min_max(stack);
-}
+	
+} */

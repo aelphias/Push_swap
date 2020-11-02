@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/25 08:16:18 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/29 20:15:24 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/11/02 20:07:28 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ void	fill_in_stack_a(t_push_swap *stack, int ac, char **av)
 		stack->a[size] = ft_atoi(av[i]);
 		i++;
 		size++;
+		if (size > ARRAY_SIZE)
+		{
+			ft_printf("Please supply less then %d elements\n", ARRAY_SIZE + 1);
+			exit(0);
+		}
 	}
 	if (size == 1)
 		exit(0);

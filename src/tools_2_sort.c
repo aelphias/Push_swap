@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 22:50:22 by aelphias          #+#    #+#             */
-/*   Updated: 2020/10/29 23:25:11 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/11/02 20:58:05 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,23 @@ void	find_min_max(t_push_swap *stack)
 	while (i < stack->size_a)
 	{
 		if (stack->a[i] < stack->min)
-		stack->min = stack->a[i];
+		{
+			stack->min = stack->a[i];
+			stack->index_min = i;
+		}
 		if (stack->a[i] > stack->max)
-		stack->max = stack->a[i];
+		{
+			stack->max = stack->a[i];
+			stack->index_max = i;
+		}
 		i++;
 	}
 	ft_printf("min=%d\n", stack->min);
+	ft_printf("index_min=%d\n", stack->index_min);
 	ft_printf("max=%d\n", stack->max);
+	ft_printf("index_max=%d\n", stack->index_max);
 }
+
+/* void	find_lis(t_push_swap *stack)
+{
+} */
