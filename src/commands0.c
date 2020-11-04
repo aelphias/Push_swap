@@ -23,6 +23,7 @@ void	sa(t_push_swap *stack)
 		stack->a[0] = stack->a[1];
 		stack->a[1] = tmp;
 	}
+	ft_printf("sa\n");
 }
 
 void	sb(t_push_swap *stack)
@@ -36,12 +37,14 @@ void	sb(t_push_swap *stack)
 		stack->b[0] = stack->b[1];
 		stack->b[1] = tmp;
 	}
+	ft_printf("sb\n");
 }
 
 void	ss(t_push_swap *stack)
 {
 	sa(stack);
 	sb(stack);
+	ft_printf("ss\n");
 }
 
 void	pa(t_push_swap *stack)
@@ -49,9 +52,6 @@ void	pa(t_push_swap *stack)
 	if (stack->size_b)
 	{
 		int	i;
-	/* 	ft_printf("entered pa\n");
-	ft_printf("size_a = %d\n--------\n", stack->size_a); */
-		
 		stack->size_a++;
 		i =	stack->size_a;
 		while (i > 0)
@@ -69,6 +69,7 @@ void	pa(t_push_swap *stack)
 		}
 		stack->b[stack->size_b + 1] = 0;
 	}
+	ft_printf("pa\n");
 }
 
 void	pb(t_push_swap *stack)
@@ -76,10 +77,8 @@ void	pb(t_push_swap *stack)
 	if (stack->size_a)
 	{
 		int	i;
-		/* ft_printf("entered pb\n");
-	ft_printf("size_b = %d\n--------\n", stack->size_b); */
-		
-		stack->size_b++;
+
+			stack->size_b++;
 		i =	stack->size_b;
 		while (i > 0)
 		{
@@ -96,4 +95,5 @@ void	pb(t_push_swap *stack)
 		}
 		stack->a[stack->size_a + 1] = 0;
 	}
+	ft_printf("pb\n");
 }

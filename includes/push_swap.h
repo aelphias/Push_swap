@@ -6,7 +6,7 @@
 /*   By: aelphias <aelphias@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/16 15:21:19 by aelphias          #+#    #+#             */
-/*   Updated: 2020/11/02 20:47:55 by aelphias         ###   ########.fr       */
+/*   Updated: 2020/11/04 20:45:35 by aelphias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include "../libft/includes/libft.h"
 # include "../ft_printf/includes/ft_printf.h"
+# include <stdlib.h>
 
-# define ARRAY_SIZE 500000 
+# define ARRAY_SIZE 501 
 
 typedef struct s_push_swap
 {
@@ -32,6 +33,13 @@ typedef struct s_push_swap
 	int max;
 	int index_min;
 	int index_max;
+	int test;
+	int	op_in_a;
+	//int el_pos;
+	/* max_seq contains quantity of el количество элеметнов которые возрастают
+	для каждого элемента стека а */
+	
+	
 }	t_push_swap;
 
 void	read_args(t_push_swap *stack, int ac, char **av);
@@ -70,7 +78,8 @@ void	s3sara(t_push_swap *stack);
 
 /* tools to sort */
 void	find_min_max(t_push_swap *stack);
-//void	find_lis(t_push_swap *stack);
+void	send_all_else_to_B(t_push_swap *stack);
+void	find_lis(t_push_swap *stack);
 
 
 
